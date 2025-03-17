@@ -6,3 +6,6 @@ go run .
 
 go mod tidy
 # Removes any dependencies the module might have accumulated that are no longer necessary and adds any missing ones
+
+
+go mod edit -replace example.com/greetings=../greetings
