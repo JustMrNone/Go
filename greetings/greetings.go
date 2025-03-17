@@ -21,10 +21,28 @@ func Hello(name string) (string, error) {
 	return message, nil
 }
 
+func Hellos(names []string) (map[string]string, error) {
+	// A map to associate names with messages.
+	messages := make(map[string]string)
+	// Loop through the received slice of names, calling
+	// the Hello function to get a message for each name.
+	for _, name := range names {
+		message, err := Hello(name)
+		if err != nil {
+			return nil, err
+		}
+		// In the map, associate the retrieved message with
+		// the name.
+		messages[name] = message
+	}
+	return messages, nil
+}
+
 // randomFormat returns one of a set of greeting messages. The returned
 // message is selected at random.
 func randomFormat() string {
 	// A slice of message formats.
+	//Note that randomFormat starts with a lowercase letter, making it accessible only to code in its own package (in other words, it's not exported).
 	formats := []string{
 		"Hi, %v. Welcome!",
 		"Great to see you, %v!",
@@ -41,8 +59,10 @@ func randomFormat() string {
 
 //Go, the := operator is a shortcut for declaring and initializing a variable in one line the long way is
 
+/*
 func Hello2(name string) string {
 	var message string
 	message = fmt.Sprintf("Hi, %v. Welcome!", name)
 	return message
 }
+*/

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/JustMrNone/Go/greetings"
+	"example.com/greetings"
 )
 
 func main() {
@@ -13,9 +13,16 @@ func main() {
 	// the time, source file, and line number.
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
+	names := []string{"Farthamiul", "Bitch", "JackAss"}
+
+	messages, errs := greetings.Hellos(names)
+
+	if errs != nil {
+		log.Fatal(errs)
+	}
 
 	// Request a greeting message.
-	message, err := greetings.Hello("ASS")
+	message, err := greetings.Hello("Farthamiul Bucklenuts")
 	// If an error was returned, print it to the console and
 	// exit the program.
 	if err != nil {
@@ -24,5 +31,6 @@ func main() {
 
 	// If no error was returned, print the returned message
 	// to the console.
+	fmt.Println(messages)
 	fmt.Println(message)
 }

@@ -1,1 +1,3 @@
 A slice is like an array, except that its size changes dynamically as you add and remove items. The slice is one of Go's most useful types.
+
+_ is called a blank indentifier
