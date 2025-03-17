@@ -1,0 +1,8 @@
+go mod init example/hello
+# Initializes a new module in the current directory with the module path "example/hello"
+
+go run .
+# Compiles and runs the Go program in the current directory
+
+go mod tidy
+# Removes any dependencies the module might have accumulated that are no longer necessary and adds any missing ones
