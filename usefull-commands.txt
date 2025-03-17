@@ -7,5 +7,33 @@ go run .
 go mod tidy
 # Removes any dependencies the module might have accumulated that are no longer necessary and adds any missing ones
 
-
 go mod edit -replace example.com/greetings=../greetings
+# Replaces the module path "example.com/greetings" with the local path "../greetings"
+
+go build
+# Compiles the packages in the module and produces an executable
+
+go list -f '{{.Target}}'
+# Lists the target of the build in the specified format
+
+set PATH=%PATH%;C:\path\to\your\install\directory
+# Adds the specified directory to the system PATH environment variable
+
+OR
+
+go env -w GOBIN=C:\path\to\your\bin
+# Sets the GOBIN environment variable to the specified directory
+
+go install
+# Compiles and installs the packages in the module
+
+# To uninstall an installed Go app, you can simply remove the binary from your $GOBIN directory or the directory where the binary is installed.
+# For example, if the binary is installed in C:\path\to\your\bin, you can delete it manually:
+# del C:\path\to\your\bin\yourapp.exe
+
+# Alternatively, you can use the following command to remove the binary:
+rm $GOBIN/yourapp
+# Removes the binary from the GOBIN directory
+
+go env GOBIN 
+# Displays the current value of the GOBIN environment variable
