@@ -37,3 +37,16 @@ rm $GOBIN/yourapp
 
 go env GOBIN 
 # Displays the current value of the GOBIN environment variable
+
+
+go get golang.org/x/example/hello/reverse
+
+
+go work init ./hello
+#The go work init command tells go to create a go.work file for a workspace containing the modules in the ./hello directory.
+
+
+ go run ./hello
+
+
+ go work use ./example/hello
