@@ -13,7 +13,8 @@ import (
 func Hello(name string) (string, error) {
 	// If no name was given, return an error with a message.
 	if name == "" {
-		return "", errors.New("no name was given")
+		err := errors.New("no name was given")
+		return "", err
 	}
 	// Return a greeting that embeds the name in a message.
 	message := fmt.Sprintf(randomFormat(), name)

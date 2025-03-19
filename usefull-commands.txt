@@ -50,3 +50,9 @@ go work init ./hello
 
 
  go work use ./example/hello
+
+ go build loop.go
+
+ go run loop.go
+
+go clean -modcache
