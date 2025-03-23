@@ -16,4 +16,15 @@ func main() {
 	elapsed := time.Since(start)
 	fmt.Printf("Loop took %s\n", elapsed)
 	//this is 120x faster than python
+
+	var mySlice []int
+
+	for i := range 10 {
+		mySlice = append(mySlice, i)
+	}
+
+	for i := range mySlice {
+		fmt.Println(mySlice[i])
+	}
+
 }
