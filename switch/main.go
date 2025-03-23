@@ -10,6 +10,7 @@ func main() {
 	whatOs()
 	isItWeekday()
 	isItNoon()
+	whatTimeIsIt()
 }
 
 func whatOs() {
@@ -39,8 +40,6 @@ func isItWeekday() {
 		fmt.Println("It's a weekday")
 	}
 }
-
-// isItNoon checks if the current time is before or after noon
 func isItNoon() {
 	mytime := time.Now()
 	switch {
@@ -50,6 +49,23 @@ func isItNoon() {
 	default:
 		// Otherwise, it's after noon
 		fmt.Println("It is after noon")
+	}
+}
+
+// isItNoon checks if the current time is before or after noon
+func whatTimeIsIt() {
+	mytime := time.Now()
+	switch {
+	case mytime.Hour() < 12:
+		// If the current hour is less than 12, it's before noon
+		fmt.Printf("It is %02d:%02d:%02d AM\n", mytime.Hour(), mytime.Minute(), mytime.Second())
+	case mytime.Hour() == 12:
+		// If it's exactly 12, it's noon
+		fmt.Printf("It is %02d:%02d:%02d PM (noon)\n", mytime.Hour(), mytime.Minute(), mytime.Second())
+	default:
+		// After noon, convert to 12-hour format
+		hour := mytime.Hour() - 12
+		fmt.Printf("It is %02d:%02d:%02d PM\n", hour, mytime.Minute(), mytime.Second())
 	}
 }
 

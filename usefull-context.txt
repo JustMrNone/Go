@@ -1,3 +1,28 @@
 A slice is like an array, except that its size changes dynamically as you add and remove items. The slice is one of Go's most useful types.
 
 _ is called a blank indentifier
+
+In Go's fmt package, the functions Print, Println, and Printf are used for formatted output, but they differ in how they handle formatting and output:
+
+Print:
+
+Outputs the arguments as they are, without adding any formatting or newlines.
+Arguments are concatenated directly.
+Example:
+Println:
+
+Outputs the arguments with a space between them and appends a newline at the end.
+Useful for printing multiple values with automatic spacing and a newline.
+Example:
+Printf:
+
+Outputs the arguments according to a specified format string.
+Requires a format specifier (e.g., %v, %d, %s) to define how the arguments should be formatted.
+Does not automatically add a newline.
+Example:
+Summary:
+Use Print for simple concatenation.
+Use Println for automatic spacing and newline.
+Use Printf for formatted output with specific formatting requirements.
+
+
