@@ -46,13 +46,13 @@ go work init ./hello
 #The go work init command tells go to create a go.work file for a workspace containing the modules in the ./hello directory.
 
 
- go run ./hello
+go run ./hello
 
 
- go work use ./example/hello
+go work use ./example/hello
 
- go build loop.go
+go build loop.go
 
- go run loop.go
+go run loop.go
 
 go clean -modcache
