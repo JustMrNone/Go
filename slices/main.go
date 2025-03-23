@@ -28,7 +28,17 @@ func main() {
 
 	// another way to create a slice is to use the make function
 
-	var intSlice3 []int32 = make([]int32, 3)
+	intSlice3 := make([]int, 3)
+
+	for i := range len(intSlice3) {
+		intSlice3[i] = i
+	}
+	fmt.Printf("\n")
+	fmt.Println(intSlice3)
+	fmt.Println(cap(intSlice3), len(intSlice3))
+
+	intSlice3 = append(intSlice3, 3, 4, 5)
 	fmt.Println(intSlice3)
 
+	fmt.Println(cap(intSlice3), len(intSlice3))
 }
