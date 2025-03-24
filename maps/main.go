@@ -36,6 +36,10 @@ func main() {
 
 	// to delete an element from the map we use
 	//delete(map, key)
-	delete(myMap2, "Grease ball jim")
+	//delete(myMap2, "Grease ball jim")
+
+	for i := range myMap2 {
+		fmt.Printf("%v\n", i)
+	}
 
 }

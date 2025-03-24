@@ -95,4 +95,26 @@ func main() {
 	for key, value := range myMap {
 		fmt.Printf("Key: %s, Value: %d\n", key, value)
 	}
+	//we do not have while loop in go but it can be achieved by
+	var i int = 0
+	for i < 10 {
+		fmt.Println(i)
+		i = i + 1
+	}
+	// we can also omit the condition
+	var j int = 0
+	for {
+		if j > 10 {
+			break
+		}
+		fmt.Println(i)
+		i = i + 1
+	}
+
+	// same thing can be achieved with this syntax
+
+	for i := 1; i < 10; i++ {
+		fmt.Println(i)
+	}
+
 }
