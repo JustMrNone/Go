@@ -26,3 +26,17 @@ Use Println for automatic spacing and newline.
 Use Printf for formatted output with specific formatting requirements.
 
 
+In Go, maps do not maintain insertion order because they are implemented as hash tables. 
+This means that the key-value pairs are stored in an unordered manner based on hash values,
+rather than in the order in which they were added.
+
+Best Practices for Maps:
+Zero Value: Accessing a non-existent key returns the zero value of the value type (e.g., 0 for int, "" for string, nil for pointers).
+ok Idiom: Always check if a key exists using the "comma ok" idiom (value, ok := myMap[key]) before using its value. This prevents unexpected zero values and makes your code more robust.
+Concurrency: Maps are not concurrency safe without external synchronization mechanisms (like sync.Mutex).
+
+
+Best Practices for Structs:
+
+Exported vs. Unexported Fields: Capitalization matters! Fields starting with a capital letter are exported (accessible from outside the package), while those starting with a lowercase letter are unexported (package-private). Use this to control encapsulation.
+Embedding: You can embed other structs into a struct, inheriting their fields and methods (promotions). This is a powerful way to build complex data structures.
