@@ -82,7 +82,7 @@ func main() {
 	list.Print()
 	linkedListLength := list.Length()
 	MySlice := list.SliceMy()
-	fmt.Println(MySlice...)
+	fmt.Println(MySlice)
 	fmt.Println("Length: ", linkedListLength)
 
 }
