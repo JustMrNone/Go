@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
+// pointers are a special type, they are variables that store memory location
 func main() {
-
 	Myint := 100
 	Mystr := "Hello Fuckers"
 

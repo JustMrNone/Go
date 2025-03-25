@@ -48,7 +48,7 @@ func (ll *LinkedList) Print() {
 	for current != nil {
 		fmt.Print(current.Data)
 		if current.Next != nil {
-			fmt.Print("->")
+			fmt.Print(" -> ")
 		}
 		current = current.Next
 	}
