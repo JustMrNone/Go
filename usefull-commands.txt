@@ -56,3 +56,9 @@ go build loop.go
 go run loop.go
 
 go clean -modcache
+
+
+go doc -all
+go test -v
+go test -bench=.
+
